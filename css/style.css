@@ -1,0 +1,91 @@
+/* style.css */
+html,body{
+    height: 100%;
+}
+img{
+    max-width: 100%;
+}
+/*cover*/
+#cover{
+    background: #222 url("../img/stars.jpg") center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#cover-caption{
+    width: 100%;
+}
+.section-content{
+    padding: 4.375rem 0;
+}
+/*about us*/
+#about{
+    background: #222 url("../img/girlincar.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 0.625rem 0 ;
+}
+
+.about-text{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1.875rem;
+}
+/*Footer Section*/
+#footer-main {
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+    padding: 2.5rem 0;
+}
+/*Back to top*/
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(232, 98, 86, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+    /*visibility: hidden;*/
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top:hover {
+    background-color: #e8332e; /* Add a dark-grey background on hover */
+}
+/*These classes are added (or removed) to the “Back to top” link using jQuery.*/
+.cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+}
+.cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+}
+/*Responsive styles*/
+/*--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;*/
+/*when the browser's width is 576px wide or less, apply the following styles*/
+@media (max-width: 576px) {
+    html{
+        font-size: 0.875rem; /*14px*/
+    }
+}
+@media (max-width: 350px) {
+    #cover{
+        padding: 300px 0;
+    }
+}
